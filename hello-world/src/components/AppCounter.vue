@@ -1,5 +1,5 @@
-<script>
-import { defineComponent, ref } from 'vue'
+<script setup>
+import { ref } from 'vue'
 /*
 // Version de Option Api
 export default defineComponent({
@@ -25,24 +25,14 @@ export default defineComponent({
 */
 
 // Version de Composition Api
-export default defineComponent({
-  name: 'AppCounter',
-  setup() {
-    let counter = ref(0)
-    const addCounter = () => {
-      counter.value++
-    }
-    const restCounter = () => {
-      counter.value--
-    }
+let counter = ref(0)
 
-    return {
-      counter,
-      addCounter,
-      restCounter
-    }
-  }
-})
+const addCounter = () => {
+  counter.value++
+}
+const restCounter = () => {
+  counter.value--
+}
 </script>
 <template>
   <h3 class="">{{ counter }}</h3>
