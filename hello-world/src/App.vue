@@ -1,12 +1,10 @@
 <script setup>
-import AppCounter from './components/AppCounter.vue'
+import ExampleSelective from './components/ExampleSelective.vue'
 </script>
 
 <template>
-  <div class="container mx-auto ">
+  <div class="container mx-auto">
     <h1 class="font-bold text-red-800">Hola Mundo</h1>
-    <AppCounter />
-    <AppCounter />
-    <AppCounter />
+    <ExampleSelective />
   </div>
 </template>
