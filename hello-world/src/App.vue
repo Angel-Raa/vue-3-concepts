@@ -1,12 +1,14 @@
 <script setup>
-import MasterForm from './components/form/MasterForm.vue'
-import ModelForm from './components/form/ModelForm.vue'
+import CycleComposition from './components/Lifecycle/CycleComposition.vue';
+
+
+
+
 </script>
 
 <template>
   <div class="container mx-auto">
-    <h1 class="font-bold text-red-800">Hola Mundo</h1>
-    <ModelForm />
-    <MasterForm />
+   <h1 class="text-justify text-gray-500 text-2xl">Home</h1>
+    <CycleComposition />
   </div>
 </template>

@@ -30,6 +30,11 @@ const addTeacher = () => {
   teacher.value.dni = ''
   teacher.value.subjects = []
 }
+
+const removeTeacher = (teacher) => {
+  teachers.value.splice(teachers.value.findIndex(it => it.dni === teacher.dni), 1)
+}
+
 </script>
 
 <template>
@@ -112,6 +117,12 @@ const addTeacher = () => {
           >
             Material
           </th>
+          <th
+            scope="col"
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Acciones
+          </th>
         </tr>
       </thead>
       <tbody class="bg-white divide-y divide-gray-200">
@@ -124,6 +135,9 @@ const addTeacher = () => {
             <ul>
               <li v-for="(item, i) in it.subject" :key="i">{{ item }}</li>
             </ul>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            <button @click="removeTeacher(it.dni)">Eliminar</button>
           </td>
         </tr>
       </tbody>
