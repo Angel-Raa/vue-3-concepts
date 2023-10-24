@@ -11,7 +11,8 @@ export default defineComponent({
     }
     return {
       handlerError,
-      handler, bgColor
+      handler,
+      bgColor
     }
   }
 })
