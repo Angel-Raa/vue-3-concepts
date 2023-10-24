@@ -32,9 +32,11 @@ const addTeacher = () => {
 }
 
 const removeTeacher = (teacher) => {
-  teachers.value.splice(teachers.value.findIndex(it => it.dni === teacher.dni), 1)
+  teachers.value.splice(
+    teachers.value.findIndex((it) => it.dni === teacher.dni),
+    1
+  )
 }
-
 </script>
 
 <template>

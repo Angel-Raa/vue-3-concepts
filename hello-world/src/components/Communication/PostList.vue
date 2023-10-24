@@ -16,6 +16,9 @@ let info = [
 const handlerAlert = (msg) => {
   alert(`Wey ${msg}`)
 }
+const deletePost = (id) => {
+  return info.filter((it) => it.id !== id)
+}
 </script>
 
 <template>
@@ -23,9 +26,11 @@ const handlerAlert = (msg) => {
     <PostDetail
       v-for="it in info"
       :key="it.id"
+      :id="it.id"
       :title="it.title"
       :body="it.body"
       @handlerAlert="handlerAlert"
+      @deletePost="deletePost"
     />
   </div>
 </template>
