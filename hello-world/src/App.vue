@@ -1,7 +1,5 @@
 <script setup>
-import ComputedBill from './components/app-bill/ComputedBill.vue';
-
-
+import ComputedBill from './components/app-bill/ComputedBill.vue'
 </script>
 
 <template>
