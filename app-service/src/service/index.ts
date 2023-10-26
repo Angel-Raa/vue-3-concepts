@@ -1,9 +1,9 @@
-// https://jsonplaceholder.typicode.com/posts
+const URL = `https://jsonplaceholder.typicode.com/posts`
 import { type Post } from '@/types'
 
 export const getAllPosts = async (): Promise<Post[]> => {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const response = await fetch(URL)
     const data = (await response.json()) as Post[]
     return data
   } catch (error) {
@@ -14,7 +14,7 @@ export const getAllPosts = async (): Promise<Post[]> => {
 
 export const getPostById = async (id: number): Promise<Post> => {
   try {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    const response = await fetch(`${URL}/${id}`)
     const data = (await response.json()) as Post
     return data
   } catch (error) {
@@ -22,3 +22,4 @@ export const getPostById = async (id: number): Promise<Post> => {
     return {} as Post
   }
 }
+

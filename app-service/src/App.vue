@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
-import PostList from './components/PostList.vue';
+import PostList from './components/PostList.vue'
 
 const msg: Ref<String> = ref('')
 </script>
