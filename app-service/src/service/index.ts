@@ -8,7 +8,7 @@ export const getAllPosts = async (): Promise<Post[]> => {
     return data
   } catch (error) {
     console.log(error)
-    return []
+    throw new Error('Failed to fetch posts')
   }
 }
 
@@ -19,7 +19,6 @@ export const getPostById = async (id: number): Promise<Post> => {
     return data
   } catch (error) {
     console.log(error)
-    return {} as Post
+    throw new Error('Failed to fetch posts')
   }
 }
-

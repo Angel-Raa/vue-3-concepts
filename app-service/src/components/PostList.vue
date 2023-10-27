@@ -10,20 +10,10 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section
-  v-for="post in posts"
-  :key="post.id"
-  class="mb-4 bg-slate-100 rounded-md"
->
-  <h2 class="text-2xl font-bold">{{ post.title }}</h2>
-  <p class="text-sm">{{ post.body }}</p>
-</section>
-
+  <section v-for="post in posts" :key="post.id" class="mb-4 container">
+    <h2 class="text-2xl font-bold">{{ post.title }}</h2>
+    <p class="text-sm">{{ post.body }}</p>
+  </section>
 </template>
 
-
-
-<style scoped>
-
-
-</style>
+<style scoped></style>
