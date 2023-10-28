@@ -7,7 +7,7 @@ title?: string: The title of the post. This property is optional.
 
 body?: string: The body of the post. This property is optional.
  */
-export interface Post {
+export interface Post  {
   userId: number
   id: number
   title?: string

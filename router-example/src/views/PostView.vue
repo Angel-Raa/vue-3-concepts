@@ -1,12 +1,12 @@
 <script setup>
-import { onMounted, ref} from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 const post = ref('')
 onMounted(() => {
   console.log('onMounted.......')
   const router = useRoute() // para accerde a los elemento de params de :to="{name:'blog', params:id}"
-  post.value = router.params.id 
+  post.value = router.params.id
 })
 </script>
 

@@ -3,7 +3,7 @@
     <h3>Blog</h3>
     <ul>
       <li>
-        <RouterLink :to="{name:'post', params:{id:1}}">
+        <RouterLink :to="{ name: 'post', params: { id: 1 } }">
           <h3>1</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officia dignissimos
@@ -14,7 +14,7 @@
       </li>
 
       <li>
-        <RouterLink :to="{name:'post', params:{id:2}}">
+        <RouterLink :to="{ name: 'post', params: { id: 2 } }">
           <h3>2</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officia dignissimos

@@ -22,9 +22,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/BlogView.vue')
   },
   {
-    path:"/blog/:id",
-    name:"post",
-    component: ( ) => import('../views/PostView.vue')
+    path: '/blog/:id',
+    name: 'post',
+    component: () => import('../views/PostView.vue')
   }
 ]
 
