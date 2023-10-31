@@ -5,6 +5,7 @@
       <RouterLink class="nav-link active btn btn-link" :to="{ name: 'Home' }"> Home</RouterLink>
       <RouterLink class="nav-link active btn btn-link" :to="{ name: 'login' }"> Login</RouterLink>
       <RouterLink class="nav-link active btn btn-link" :to="{ name: 'register' }"> Register</RouterLink>
+      <RouterLink class="nav-link active btn btn-link" :to="{ name: 'firebase' }"> firebase</RouterLink>
     </ul>
   </nav>
 </template>

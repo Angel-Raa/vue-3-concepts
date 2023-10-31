@@ -2,16 +2,18 @@
 import type { Login, Response } from '@/types'
 import { type Ref, ref } from 'vue'
 import { login } from '../service/index'
+
+// Auth backend
 const form: Ref<Login> = ref({
   username: '',
   password: ''
 })
 
 const handlerLogin = async () => {
-  const response:Response = await login(form.value)
-  
+  const response:Response = await login(form.value)  
   console.log(response)
 }
+
 </script>
 
 <template>
