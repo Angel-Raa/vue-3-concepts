@@ -20,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
     path:"/firebase",
     name:"firebase",
     component:()=>import('../views/LoginFirebase.vue')
+  },
+  {
+    path:"/social",
+    name:"social",
+    component:()=>import('../views/SocialLogin.vue')
   }
 ]
 
