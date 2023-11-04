@@ -1,5 +1,5 @@
 <template>
-    <main>
-        
-    </main>
+  <main>
+    <h2>Hola Mundo</h2>
+  </main>
 </template>
