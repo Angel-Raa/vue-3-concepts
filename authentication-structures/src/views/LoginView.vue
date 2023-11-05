@@ -10,10 +10,12 @@ const form: Ref<Login> = ref({
 })
 
 const handlerLogin = async () => {
-  const response:Response = await login(form.value)  
+  const response: Response = await login(form.value)
+  if (response) {
+    //
+  }
   console.log(response)
 }
-
 </script>
 
 <template>

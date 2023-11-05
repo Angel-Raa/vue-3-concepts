@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { initializeApp } from 'firebase/app'
+import VueCookies from 'vue-cookies'
+
 
 const app = createApp(App)
 const firebaseConfig = {
@@ -13,5 +15,10 @@ const firebaseConfig = {
   appId: '1:69057984636:web:1468323c08b83114d131f9'
 }
 initializeApp(firebaseConfig)
+app.use(VueCookies, {
+  expires: '1d' // para establecer en tiempo de duracion
+})
+
 app.use(router)
 app.mount('#app')
+
