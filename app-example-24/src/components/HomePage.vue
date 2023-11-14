@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import AuMenu from './AuMenu.vue';
-import AuxBar from './AuxBar.vue';
-
-
+import MainLayouts from '@/layouts/MainLayouts.vue'
 </script>
 <template>
-  <main class="container">
-    <div class="auxbar">
-    <AuxBar />
-    </div>
-    <div class="content">
-      <AuMenu />
-    </div>
-    <div>
-      <h2>My home content</h2>
-    </div>
-  </main>
+  <MainLayouts>
+    <template v-slot:main-content>
+      <h2>My Home Main main-content</h2>
+    </template>
+    <template #section-content>
+      <h2>My Home section-content</h2>
+    </template>
+  </MainLayouts>
 </template>
