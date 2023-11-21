@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, type VNode } from 'vue'
 const lazyOptions = ref({
   src: 'https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U',
   lifecycle: {
-    loading: (el: string) => {
+    loading: (el: VNode) => {
       console.log(`Cargando imagen  ${el}`)
     },
-    error: (el: string) => {
+    error: (el: VNode) => {
       console.log(`error a carga la  imagen  ${el}`)
     },
-    loaded: (el: string) => {
+    loaded: (el: VNode) => {
       console.log(`Imagen cargada  ${el}`)
     }
   },
@@ -18,7 +18,7 @@ const lazyOptions = ref({
 </script>
 
 <template>
-  <section>
+  <section >
     <h2>About Views</h2>
     <img
       v-lazy="{
@@ -29,7 +29,7 @@ const lazyOptions = ref({
       }"
     />
 
-    <img
+    <img class="img-avatar"
       v-lazy="{
         src: lazyOptions.src,
         lifecycle: lazyOptions.lifecycle,
@@ -38,3 +38,30 @@ const lazyOptions = ref({
     />
   </section>
 </template>
+
+<style scoped>
+.container {
+  display: flex;
+}
+img [lazy=loading] {
+    background-color: #09f;
+    width: 450px;
+
+}
+
+img [lazy=loaded] {
+
+}
+
+img [lazy=error] {
+
+}
+
+.img-avatar {
+  width: 100px;
+  border-radius: 10px;
+  
+}
+
+
+</style>
