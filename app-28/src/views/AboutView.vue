@@ -1,0 +1,40 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+const lazyOptions = ref({
+  src: 'https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U',
+  lifecycle: {
+    loading: (el: string) => {
+      console.log(`Cargando imagen  ${el}`)
+    },
+    error: (el: string) => {
+      console.log(`error a carga la  imagen  ${el}`)
+    },
+    loaded: (el: string) => {
+      console.log(`Imagen cargada  ${el}`)
+    }
+  },
+  delay: 500
+})
+</script>
+
+<template>
+  <section>
+    <h2>About Views</h2>
+    <img
+      v-lazy="{
+        src: 'https://fastly.picsum.photos/id/959/1280/800.jpg?hmac=9d9jd7otwOiCnNKXpFrkdcK3OyOOREdPzVe83tSvrns',
+        loading: 'example.jpg',
+        error: 'error.jpg',
+        delay: 500
+      }"
+    />
+
+    <img
+      v-lazy="{
+        src: lazyOptions.src,
+        lifecycle: lazyOptions.lifecycle,
+        delay: lazyOptions.delay
+      }"
+    />
+  </section>
+</template>
