@@ -8,7 +8,7 @@ const resert = () => counter.value--
 
 <template>
   <div class="container">
-    <p>Counter : {{ counter }}</p>
+    <p>Counter App: {{ counter }}</p>
     <button class="btn-add" @click="add()">Increment</button>
     <button class="btn-resert" @click="resert()">Resert</button>
   </div>

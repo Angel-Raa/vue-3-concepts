@@ -1,8 +1,7 @@
-import HelloWorld from './HelloWorld.vue'
+import { describe, it } from 'vitest'
 
-describe('<HelloWorld />', () => {
-  it('renders', () => {
-    // see: https://on.cypress.io/mounting-vue
-    cy.mount(HelloWorld)
+describe('Counter Feature', () => {
+  it('user can access to Page', () => {
   })
+  it('user can increment counter', () => {})
 })
