@@ -5,6 +5,3 @@ describe("HelloWorld", ():void => {
    
 })
 
-
-cy.url()
-cy.get()
