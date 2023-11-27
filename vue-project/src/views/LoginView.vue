@@ -14,18 +14,19 @@ const login = () => {
 }
 </script>
 <template>
+  
   <form @submit.prevent="login()">
-    <label id="email"
+    <label for="email"
       >Email :
-      <input id="email" type="email" v-model="email" />
+      <input id="email" type="email" v-model="email"/>
     </label>
-    <label id="email"
+    <label for="password"
       >Password:
       <input id="password" type="password" v-model="password" />
     </label>
     <button>Login</button>
     <div v-if="error">
-    <p>Error</p>
+    <p id="error">Invalid credentials</p>
   </div>
   </form>
 

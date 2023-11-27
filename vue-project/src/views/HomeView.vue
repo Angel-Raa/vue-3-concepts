@@ -8,5 +8,9 @@
       </ul>
     </nav>
   </header>
-  <main>Home Views</main>
+  <main>
+    <h1>
+      Home Views
+    </h1>
+    </main>
 </template>
