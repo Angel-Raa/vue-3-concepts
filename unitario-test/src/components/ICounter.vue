@@ -9,3 +9,5 @@ const increment = (): void => {
   <h3>{{ counter }}</h3>
   <button @click="increment()">Increment</button>
 </template>
+
+
